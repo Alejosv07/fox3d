@@ -95,7 +95,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
   floorMapTexture.repeat.set(6, 6);
 
   const floorDispTexture = textureLoader.load(
-    "../../public/img/floor/textures/sparse_grass_disp_1k.jpg"
+    "/img/floor/textures/sparse_grass_disp_1k.jpg"
   );
 
   const floorGeometry = new THREE.PlaneGeometry(24, 24, 1, 1);
