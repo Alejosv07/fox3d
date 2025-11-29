@@ -5,7 +5,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 ((d, w) => {
   const gui = new GUI({ title: "options" });
-
+  const BASEURL = "/fox3d";
   const canvas = d.querySelector("canvas.webgl");
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
@@ -56,7 +56,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
   const gltfLoader = new GLTFLoader();
 
-  gltfLoader.load("/img/fox/Fox.gltf", (model) => {
+  gltfLoader.load(BASEURL+"/img/fox/Fox.gltf", (model) => {
     const fox = model.scene;
     fox.castShadow = true;
     fox.children[1].castShadow = true;
@@ -81,13 +81,13 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
   const textureLoader = new THREE.TextureLoader();
 
   const floorArmTexture = textureLoader.load(
-    "/img/floor/textures/sparse_grass_arm_1k.jpg"
+    BASEURL+"/img/floor/textures/sparse_grass_arm_1k.jpg"
   );
   const floorNormalTexture = textureLoader.load(
-    "/img/floor/textures/sparse_grass_nor_gl_1k.png"
+    BASEURL+"/img/floor/textures/sparse_grass_nor_gl_1k.png"
   );
   const floorMapTexture = textureLoader.load(
-    "/img/floor/textures/sparse_grass_diff_1k.jpg"
+    BASEURL+"/img/floor/textures/sparse_grass_diff_1k.jpg"
   );
   floorMapTexture.colorSpace = THREE.SRGBColorSpace;
   floorMapTexture.wrapS = THREE.RepeatWrapping;
@@ -95,7 +95,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
   floorMapTexture.repeat.set(6, 6);
 
   const floorDispTexture = textureLoader.load(
-    "/img/floor/textures/sparse_grass_disp_1k.jpg"
+    BASEURL+"/img/floor/textures/sparse_grass_disp_1k.jpg"
   );
 
   const floorGeometry = new THREE.PlaneGeometry(24, 24, 1, 1);
