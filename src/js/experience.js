@@ -56,7 +56,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
   const gltfLoader = new GLTFLoader();
 
-  gltfLoader.load("../../public/img/fox/fox.gltf", (model) => {
+  gltfLoader.load("/img/fox/fox.gltf", (model) => {
     const fox = model.scene;
     fox.castShadow = true;
     fox.children[1].castShadow = true;
@@ -81,13 +81,13 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
   const textureLoader = new THREE.TextureLoader();
 
   const floorArmTexture = textureLoader.load(
-    "../../public/img/floor/textures/sparse_grass_arm_1k.jpg"
+    "/img/floor/textures/sparse_grass_arm_1k.jpg"
   );
   const floorNormalTexture = textureLoader.load(
-    "../../public/img/floor/textures/sparse_grass_nor_gl_1k.png"
+    "/img/floor/textures/sparse_grass_nor_gl_1k.png"
   );
   const floorMapTexture = textureLoader.load(
-    "../../public/img/floor/textures/sparse_grass_diff_1k.jpg"
+    "/img/floor/textures/sparse_grass_diff_1k.jpg"
   );
   floorMapTexture.colorSpace = THREE.SRGBColorSpace;
   floorMapTexture.wrapS = THREE.RepeatWrapping;
