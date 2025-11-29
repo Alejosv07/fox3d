@@ -56,7 +56,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
   const gltfLoader = new GLTFLoader();
 
-  gltfLoader.load("/img/fox/fox.gltf", (model) => {
+  gltfLoader.load("/img/fox/Fox.gltf", (model) => {
     const fox = model.scene;
     fox.castShadow = true;
     fox.children[1].castShadow = true;
